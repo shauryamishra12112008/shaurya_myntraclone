@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myntra Clone | Fashion Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <a href="#" class="logo">MYNTRA<span>.</span></a>
+
+        <nav class="nav-links">
+            <a href="#men">MEN</a>
+            <a href="#women">WOMEN</a>
+            <a href="#kids">KIDS</a>
+            <a href="#home">HOME & LIVING</a>
+            <a href="#beauty">BEAUTY</a>
+        </nav>
+
+        <div class="search-box">
+            <span>⌕</span>
+            <input type="text" placeholder="Search your favourite styles...">
+        </div>
+
+        <div class="nav-icons">
+            <div class="nav-item">
+                <span>♙</span>
+                <small>Profile</small>
+            </div>
+            <div class="nav-item">
+                <span>♡</span>
+                <small> MyWishlist</small>
+            </div>
+            <div class="nav-item">
+                <span>♧</span>
+                <small>Cart</small>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sale Announcement -->
+    <div class="announcement">
+        ✨ STYLE YOURSELF WITH THE LATEST TRENDS! ✨
+    </div>
+
+    <!-- Main Banner -->
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">Seasonal Sale</p>
+                <h1>FASHION THAT<br>FEELS LIKE YOU.</h1>
+                <p class="hero-description">
+                
+                    Explore styles made for every moment.
+                </p>
+                <a href="#categories" class="shop-button">EXPLORE COLLECTION →</a>
+            </div>
+
+            <div class="hero-image">
+                <img
+                    src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1000&q=85"
+                    alt="Fashion models wearing stylish outfits">
+            </div>
+            <div class="hero-label">YOUR STYLE. YOUR STORY.</div>
+        </section>
+
+        <!-- Benefits -->
+        <section class="benefits">
+            <div>
+                <span>🚚</span>
+                <p><strong>Easy Shopping</strong><br>Browse your favourite styles</p>
+            </div>
+            <div>
+                <span>✦</span>
+                <p><strong>Latest Trends</strong><br>Discover new collections</p>
+            </div>
+            <div>
+                <span>♡</span>
+                <p><strong>Style for Everyone</strong><br>Find your perfect look</p>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section class="section" id="categories">
+            <div class="section-heading">
+                <p class="eyebrow">FIND YOUR VIBE</p>
+                <h2>SHOP BY CATEGORY</h2>
+                <p>Something for every mood and every moment.</p>
+            </div>
+
+            <div class="category-grid">
+                <a href="#men" class="category-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1516257984-b1b4d707412e?auto=format&fit=crop&w=600&q=80"
+                        alt="Men's fashion">
+                    <div class="category-overlay">
+                        <h3>MEN</h3>
+                        <span>Explore items →</span>
+                    </div>
+                </a>
+
+                <a href="#women" class="category-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=600&q=80"
+                        alt="Women's fashion">
+                    <div class="category-overlay">
+                        <h3>WOMEN</h3>
+                        <span>Explore Collection →</span>
+                    </div>
+                </a>
+
+                <a href="#kids" class="category-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=600&q=80"
+                        alt="Kids' fashion">
+                    <div class="category-overlay">
+                        <h3>KIDS</h3>
+                        <span>Explore Collection →</span>
+                    </div>
+                </a>
+
+                <a href="#beauty" class="category-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=80"
+                        alt="Beauty products">
+                    <div class="category-overlay">
+                        <h3>BEAUTY</h3>
+                        <span>Explore Collection →</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Products -->
+        <section class="section products-section" id="men">
+            <div class="section-heading">
+                <p class="eyebrow">HANDPICKED FOR YOU</p>
+                <h2>TRENDING THIS WEEK</h2>
+                <p>Fresh finds to refresh your wardrobe.</p>
+            </div>
+
+            <div class="product-grid">
+
+                <article class="product-card">
+                    <div class="product-image">
+                        <span class="discount">30% OFF</span>
+                        <img
+                            src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80"
+                            alt="Classic casual T-shirt">
+                        <button class="wishlist" aria-label="Add to wishlist">♡</button>
+                    </div>
+                    <div class="product-info">
+                        <p class="brand">URBAN BASICS</p>
+                        <p class="product-name">Classic Cotton T-Shirt</p>
+                        <p class="price">₹899 <del>₹999</del> <span>30% off</span></p>
+                        <button class="bag-button">ADD TO BAG +</button>
+                    </div>
+                </article>
+
+                <article class="product-card" id="women">
+                    <div class="product-image">
+                        <span class="discount">₹60 OFF</span>
+                        <img
+                            src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=600&q=80"
+                            alt="Elegant women's outfit">
+                        <button class="wishlist" aria-label="Add to wishlist">♡</button>
+                    </div>
+                    <div class="product-info">
+                        <p class="brand">STYLE STUDIO</p>
+                        <p class="product-name">Elegant Everyday Outfit</p>
+                        <p class="price">₹1,099 <del>₹1,999</del> <span>18% off</span></p>
+                        <button class="bag-button">ADD TO BAG +</button>
+                    </div>
+                </article>
+
+                <article class="product-card" id="kids">
+                    <div class="product-image">
+                        <span class="discount">₹200 OFF</span>
+                        <img
+                            src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=600&q=80"
+                            alt="Colourful kids' clothing">
+                        <button class="wishlist" aria-label="Add to wishlist">♡</button>
+                    </div>
+                    <div class="product-info">
+                        <p class="brand">LITTLE LOOKS</p>
+                        <p class="product-name">Everyday Kids' Wear</p>
+                        <p class="price">₹599 <del>₹799</del> <span>25% off</span></p>
+                        <button class="bag-button">ADD TO BAG +</button>
+                    </div>
+                </article>
+
+                <article class="product-card" id="beauty">
+                    <div class="product-image">
+                        <span class="discount">₹150 OFF</span>
+                        <img
+                            src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=80"
+                            alt="Beauty and skincare collection">
+                        <button class="wishlist" aria-label="Add to wishlist">♡</button>
+                    </div>
+                    <div class="product-info">
+                        <p class="brand">GLOW ESSENTIALS</p>
+                        <p class="product-name">Beauty Essentials Set</p>
+                        <p class="price">₹849 <del>₹999</del> <span>15% off</span></p>
+                        <button class="bag-button">ADD TO BAG +</button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Promotional Banner -->
+        <section class="promo-banner" id="home">
+            <div>
+                <p class="eyebrow">A LITTLE MORE YOU</p>
+                <h2>GOOD STYLE.<br>GREAT CONFIDENCE.</h2>
+                <p>Discover looks you'll love wearing.</p>
+                <a href="#categories" class="shop-button light-button">
+                    SHOP NOW →
+                </a>
+            </div>
+            <div class="promo-decoration">STYLE<br>IS<br>PERSONAL.</div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <a href="#" class="logo footer-logo">MYNTRA<span>.</span></a>
+            
+            </div>
+
+            <div>
+                <h4>SHOP</h4>
+                <a href="#men">Men</a>
+                <a href="#women">Women</a>
+                <a href="#kids">Kids</a>
+                <a href="#beauty">Beauty</a>
+            </div>
+
+            <div>
+                <h4>ABOUT THIS PROJECT</h4>
+                <p>Frontend development</p>
+                <p>HTML & CSS</p>
+            
+            </div>
+        </div>
+
+        <div class="copyright">
+        Mini project by <strong>Shaurya Mishra</strong> 
+        </div>
+    </footer>
+
+</body>
+</html>
