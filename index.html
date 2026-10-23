@@ -4,256 +4,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Myntra Clone | Fashion Store</title>
+    <meta name="description" content="A stylish fashion shopping website mini project.">
+    <title>Myntra Clone | Fashion & Lifestyle</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
-    <!-- Navigation Bar -->
-    <header class="navbar">
-        <a href="#" class="logo">MYNTRA<span>.</span></a>
-
-        <nav class="nav-links">
-            <a href="#men">MEN</a>
-            <a href="#women">WOMEN</a>
-            <a href="#kids">KIDS</a>
-            <a href="#home">HOME & LIVING</a>
-            <a href="#beauty">BEAUTY</a>
-        </nav>
-
-        <div class="search-box">
-            <span>⌕</span>
-            <input type="text" placeholder="Search your favourite styles...">
-        </div>
-
-        <div class="nav-icons">
-            <div class="nav-item">
-                <span>♙</span>
-                <small>Profile</small>
-            </div>
-            <div class="nav-item">
-                <span>♡</span>
-                <small> MyWishlist</small>
-            </div>
-            <div class="nav-item">
-                <span>♧</span>
-                <small>Cart</small>
-            </div>
-        </div>
-    </header>
-
-    <!-- Sale Announcement -->
     <div class="announcement">
-        ✨ STYLE YOURSELF WITH THE LATEST TRENDS! ✨
+        ✨ YOUR STYLE, YOUR RULES &nbsp; | &nbsp; DISCOVER SOMETHING NEW
     </div>
 
-    <!-- Main Banner -->
+    <header class="navbar">
+        <a href="#" class="logo" aria-label="Fashion home">
+            myntra<span>✦</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="#products" data-filter="men">MEN</a>
+            <a href="#products" data-filter="women">WOMEN</a>
+            <a href="#products" data-filter="kids">KIDS</a>
+            <a href="#products" data-filter="beauty">BEAUTY</a>
+            <a href="#categories">LIFESTYLE</a>
+        </nav>
+
+        <label class="search-box">
+            <span aria-hidden="true">⌕</span>
+            <input id="searchInput" type="search"
+                   placeholder="Search for products, brands and more"
+                   aria-label="Search products">
+            <button id="clearSearch" class="clear-search" type="button"
+                    aria-label="Clear search" hidden>×</button>
+        </label>
+
+        <div class="nav-actions">
+            <button class="nav-action" id="profileBtn" type="button">
+                <span>♙</span><small>Profile</small>
+            </button>
+            <button class="nav-action" id="wishlistNav" type="button">
+                <span>♡</span><small>Wishlist</small>
+            </button>
+            <button class="nav-action bag-nav" id="bagNav" type="button">
+                <span>♧<b id="bagCount" class="count">0</b></span>
+                <small>Bag</small>
+            </button>
+        </div>
+
+        <button class="mobile-menu" id="mobileMenu" aria-label="Toggle navigation"
+                aria-expanded="false" type="button">☰</button>
+    </header>
+
     <main>
         <section class="hero">
-            <div class="hero-content">
-                <p class="eyebrow">Seasonal Sale</p>
-                <h1>FASHION THAT<br>FEELS LIKE YOU.</h1>
-                <p class="hero-description">
-                
-                    Explore styles made for every moment.
-                </p>
-                <a href="#categories" class="shop-button">EXPLORE COLLECTION →</a>
+            <div class="hero-copy">
+                <span class="eyebrow">THE NEW SEASON EDIT</span>
+                <h1>Wear your<br> <span>own story.</span></h1>
+                <p>Fresh fits. Beautiful finds. Everyday confidence.
+                   Find the pieces that feel like you.</p>
+                <a href="#products" class="primary-btn">EXPLORE COLLECTION <span>→</span></a>
+
+                <div class="hero-note">
+                    <span class="note-icon">✦</span>
+                    <div><strong>Style starts here</strong><small>Curated picks for every mood</small></div>
+                </div>
             </div>
 
-            <div class="hero-image">
+            <div class="hero-visual">
                 <img
-                    src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1000&q=85"
-                    alt="Fashion models wearing stylish outfits">
+                    src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1100&q=85"
+                    alt="Fashion models browsing a clothing collection">
+                <div class="floating-card">
+                    <span>THE EDIT · 2026</span>
+                    <strong>Made for<br>your moment.</strong>
+                    <a href="#products">Shop the look ↗</a>
+                </div>
+                <div class="hero-stamp">FRESH<br>FINDS<br>ONLY.</div>
             </div>
-            <div class="hero-label">YOUR STYLE. YOUR STORY.</div>
         </section>
 
-        <!-- Benefits -->
         <section class="benefits">
-            <div>
-                <span>🚚</span>
-                <p><strong>Easy Shopping</strong><br>Browse your favourite styles</p>
-            </div>
-            <div>
-                <span>✦</span>
-                <p><strong>Latest Trends</strong><br>Discover new collections</p>
-            </div>
-            <div>
-                <span>♡</span>
-                <p><strong>Style for Everyone</strong><br>Find your perfect look</p>
-            </div>
+            <div class="benefit"><span>✧</span><div><strong>Fresh styles</strong><small>Discover new looks</small></div></div>
+            <div class="benefit"><span>♡</span><div><strong>Save your favourites</strong><small>Your wishlist, your way</small></div></div>
+            <div class="benefit"><span>✦</span><div><strong>Made for everyone</strong><small>Style for every moment</small></div></div>
         </section>
 
-        <!-- Categories -->
-        <section class="section" id="categories">
+        <section class="section categories-section" id="categories">
             <div class="section-heading">
-                <p class="eyebrow">FIND YOUR VIBE</p>
-                <h2>SHOP BY CATEGORY</h2>
-                <p>Something for every mood and every moment.</p>
+                <span class="eyebrow">A LITTLE BIT OF EVERYTHING</span>
+                <h2>Find your <span>kind of style.</span></h2>
+                <p>Pick a mood. Find a look. Make it yours.</p>
             </div>
 
             <div class="category-grid">
-                <a href="#men" class="category-card">
-                    <img
-                        src="https://images.unsplash.com/photo-1516257984-b1b4d707412e?auto=format&fit=crop&w=600&q=80"
-                        alt="Men's fashion">
-                    <div class="category-overlay">
-                        <h3>MEN</h3>
-                        <span>Explore items →</span>
-                    </div>
-                </a>
-
-                <a href="#women" class="category-card">
-                    <img
-                        src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=600&q=80"
-                        alt="Women's fashion">
-                    <div class="category-overlay">
-                        <h3>WOMEN</h3>
-                        <span>Explore Collection →</span>
-                    </div>
-                </a>
-
-                <a href="#kids" class="category-card">
-                    <img
-                        src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=600&q=80"
-                        alt="Kids' fashion">
-                    <div class="category-overlay">
-                        <h3>KIDS</h3>
-                        <span>Explore Collection →</span>
-                    </div>
-                </a>
-
-                <a href="#beauty" class="category-card">
-                    <img
-                        src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=80"
-                        alt="Beauty products">
-                    <div class="category-overlay">
-                        <h3>BEAUTY</h3>
-                        <span>Explore Collection →</span>
-                    </div>
-                </a>
+                <button class="category-card" data-category="women" type="button">
+                    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=700&q=80" alt="Women's fashion">
+                    <span class="category-text"><small>THE EVERYDAY EDIT</small><strong>WOMEN</strong><b>Explore collection ↗</b></span>
+                </button>
+                <button class="category-card" data-category="men" type="button">
+                    <img src="https://images.unsplash.com/photo-1516257984-b1b4d707412e?auto=format&fit=crop&w=700&q=80" alt="Men's fashion">
+                    <span class="category-text"><small>THE MODERN EDIT</small><strong>MEN</strong><b>Explore collection ↗</b></span>
+                </button>
+                <button class="category-card" data-category="kids" type="button">
+                    <img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=700&q=80" alt="Kids' fashion">
+                    <span class="category-text"><small>THE LITTLE EDIT</small><strong>KIDS</strong><b>Explore collection ↗</b></span>
+                </button>
+                <button class="category-card" data-category="beauty" type="button">
+                    <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=700&q=80" alt="Beauty and skincare">
+                    <span class="category-text"><small>THE GLOW EDIT</small><strong>BEAUTY</strong><b>Explore collection ↗</b></span>
+                </button>
             </div>
         </section>
 
-        <!-- Products -->
-        <section class="section products-section" id="men">
-            <div class="section-heading">
-                <p class="eyebrow">HANDPICKED FOR YOU</p>
-                <h2>TRENDING THIS WEEK</h2>
-                <p>Fresh finds to refresh your wardrobe.</p>
+        <section class="section products-section" id="products">
+            <div class="section-heading product-heading">
+                <div>
+                    <span class="eyebrow">HANDPICKED FOR YOU</span>
+                    <h2>Trending <span>right now.</span></h2>
+                    <p id="resultText">Our favourite finds, all in one place.</p>
+                </div>
+                <label class="sort-box">
+                    <span>Sort by</span>
+                    <select id="sortSelect" aria-label="Sort products">
+                        <option value="featured">Recommended</option>
+                        <option value="low">Price: Low to High</option>
+                        <option value="high">Price: High to Low</option>
+                        <option value="discount">Biggest Discount</option>
+                    </select>
+                </label>
             </div>
 
-            <div class="product-grid">
+            <div class="filter-bar" id="filterBar">
+                <button class="filter-chip active" data-category="all">All products</button>
+                <button class="filter-chip" data-category="women">Women</button>
+                <button class="filter-chip" data-category="men">Men</button>
+                <button class="filter-chip" data-category="kids">Kids</button>
+                <button class="filter-chip" data-category="beauty">Beauty</button>
+            </div>
 
-                <article class="product-card">
-                    <div class="product-image">
-                        <span class="discount">30% OFF</span>
-                        <img
-                            src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80"
-                            alt="Classic casual T-shirt">
-                        <button class="wishlist" aria-label="Add to wishlist">♡</button>
-                    </div>
-                    <div class="product-info">
-                        <p class="brand">URBAN BASICS</p>
-                        <p class="product-name">Classic Cotton T-Shirt</p>
-                        <p class="price">₹899 <del>₹999</del> <span>30% off</span></p>
-                        <button class="bag-button">ADD TO BAG +</button>
-                    </div>
-                </article>
-
-                <article class="product-card" id="women">
-                    <div class="product-image">
-                        <span class="discount">₹60 OFF</span>
-                        <img
-                            src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=600&q=80"
-                            alt="Elegant women's outfit">
-                        <button class="wishlist" aria-label="Add to wishlist">♡</button>
-                    </div>
-                    <div class="product-info">
-                        <p class="brand">STYLE STUDIO</p>
-                        <p class="product-name">Elegant Everyday Outfit</p>
-                        <p class="price">₹1,099 <del>₹1,999</del> <span>18% off</span></p>
-                        <button class="bag-button">ADD TO BAG +</button>
-                    </div>
-                </article>
-
-                <article class="product-card" id="kids">
-                    <div class="product-image">
-                        <span class="discount">₹200 OFF</span>
-                        <img
-                            src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=600&q=80"
-                            alt="Colourful kids' clothing">
-                        <button class="wishlist" aria-label="Add to wishlist">♡</button>
-                    </div>
-                    <div class="product-info">
-                        <p class="brand">LITTLE LOOKS</p>
-                        <p class="product-name">Everyday Kids' Wear</p>
-                        <p class="price">₹599 <del>₹799</del> <span>25% off</span></p>
-                        <button class="bag-button">ADD TO BAG +</button>
-                    </div>
-                </article>
-
-                <article class="product-card" id="beauty">
-                    <div class="product-image">
-                        <span class="discount">₹150 OFF</span>
-                        <img
-                            src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=80"
-                            alt="Beauty and skincare collection">
-                        <button class="wishlist" aria-label="Add to wishlist">♡</button>
-                    </div>
-                    <div class="product-info">
-                        <p class="brand">GLOW ESSENTIALS</p>
-                        <p class="product-name">Beauty Essentials Set</p>
-                        <p class="price">₹849 <del>₹999</del> <span>15% off</span></p>
-                        <button class="bag-button">ADD TO BAG +</button>
-                    </div>
-                </article>
-
+            <div class="product-grid" id="productGrid" aria-live="polite"></div>
+            <div class="empty-state" id="emptyState" hidden>
+                <span>♡</span>
+                <h3>No products found</h3>
+                <p>Try another search or explore all our collections.</p>
+                <button class="primary-btn" id="resetFilters">VIEW ALL PRODUCTS →</button>
             </div>
         </section>
 
-        <!-- Promotional Banner -->
-        <section class="promo-banner" id="home">
+        <section class="promo-banner">
             <div>
-                <p class="eyebrow">A LITTLE MORE YOU</p>
-                <h2>GOOD STYLE.<br>GREAT CONFIDENCE.</h2>
-                <p>Discover looks you'll love wearing.</p>
-                <a href="#categories" class="shop-button light-button">
-                    SHOP NOW →
-                </a>
+                <span class="eyebrow">A REMINDER FROM US</span>
+                <h2>You don't follow trends.<br><span>You make them.</span></h2>
+                <p>Wear what you love. Own every moment.</p>
+                <a href="#products" class="primary-btn dark-btn">FIND YOUR NEXT FAVOURITE ↗</a>
             </div>
-            <div class="promo-decoration">STYLE<br>IS<br>PERSONAL.</div>
+            <div class="promo-art" aria-hidden="true">
+                <span>STYLE</span><span>IS</span><span>PERSONAL.</span>
+                <div class="promo-circle">✦</div>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <span class="eyebrow">THE GOOD STUFF, OCCASIONALLY</span>
+            <h2>A little style in your inbox.</h2>
+            <p>This demo newsletter is for the college project.</p>
+            <form id="newsletterForm" class="newsletter-form">
+                <input type="email" id="emailInput" placeholder="Enter your email address" required>
+                <button type="submit">COUNT ME IN ↗</button>
+            </form>
+            <p id="newsletterMessage" class="newsletter-message" aria-live="polite"></p>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
-        <div class="footer-grid">
-            <div>
-                <a href="#" class="logo footer-logo">MYNTRA<span>.</span></a>
-            
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a href="#" class="logo">myntra<span>✦</span></a>
+                <p>A fashion shopping website built as a college mini project using HTML, CSS and JavaScript.</p>
             </div>
-
-            <div>
-                <h4>SHOP</h4>
-                <a href="#men">Men</a>
-                <a href="#women">Women</a>
-                <a href="#kids">Kids</a>
-                <a href="#beauty">Beauty</a>
-            </div>
-
-            <div>
-                <h4>ABOUT THIS PROJECT</h4>
-                <p>Frontend development</p>
-                <p>HTML & CSS</p>
-            
-            </div>
+            <div class="footer-column"><h3>EXPLORE</h3><a href="#products">All products</a><a href="#categories">Categories</a><a href="#products" data-filter="women">Women's fashion</a></div>
+            <div class="footer-column"><h3>YOUR SPACE</h3><button id="footerWishlist">Wishlist</button><button id="footerBag">Shopping bag</button><button id="backToTop">Back to top ↑</button></div>
         </div>
-
-        <div class="copyright">
-        Mini project by <strong>Shaurya Mishra</strong> 
+        <div class="footer-bottom">
+            <span> mini project</span>
+            <span>Designed with ♡ and a little creativity.</span>
         </div>
     </footer>
+
+    <!-- Shopping bag drawer -->
+    <div class="overlay" id="overlay"></div>
+    <aside class="side-drawer" id="bagDrawer" aria-label="Shopping bag" aria-hidden="true">
+        <div class="drawer-header"><div><span class="eyebrow">YOUR PICKS</span><h2>Shopping bag <span id="drawerCount">(0)</span></h2></div><button class="close-drawer" data-close aria-label="Close bag">×</button></div>
+        <div class="drawer-content" id="bagItems"></div>
+        <div class="drawer-footer">
+            <div class="total-row"><span>Subtotal</span><strong id="bagTotal">₹0</strong></div>
+            <p>Shipping and taxes are not included in this demo.</p>
+            <button id="checkoutBtn" class="primary-btn checkout-btn">CONTINUE <span>→</span></button>
+        </div>
+    </aside>
+
+    <!-- Wishlist drawer -->
+    <aside class="side-drawer" id="wishlistDrawer" aria-label="Wishlist" aria-hidden="true">
+        <div class="drawer-header"><div><span class="eyebrow">SAVED FOR LATER</span><h2>Your wishlist <span id="wishlistCount">(0)</span></h2></div><button class="close-drawer" data-close aria-label="Close wishlist">×</button></div>
+        <div class="drawer-content" id="wishlistItems"></div>
+    </aside>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 </body>
 </html>
